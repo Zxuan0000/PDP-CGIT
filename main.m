@@ -17,7 +17,7 @@ for rep=1:20
         end 
         for group=1:size(T_parameter,1) 
          MaxIt=T_parameter(group,2);
-         fprintf('\n EASY-DMOEA dec:%d runing on: %s, configure: %d, environment:',con.dec,Problem.Name,group);
+         fprintf('\n PDP_CGIT_DMOEA-DMOEA dec:%d runing on: %s, configure: %d, environment:',con.dec,Problem.Name,group);
          reskt=PDP_CGIT_DMOEA(Problem,popSize,MaxIt,T_parameter,group);        
          [resIGD,resHV]=computeMetrics(reskt,group,rep,testFuncNo,T_parameter);
          fprintf('\n %.3d',resIGD);
